@@ -204,8 +204,8 @@ Theoretically, smaller number of sets could be used. For example 10, this would 
 It may be still possible to generate offline such set of edges that can cause recovery of edges from `IBF` to fail for one node.
 
 ### Increase number of `IbfSet` structures per `IbfPeerSet`
-In theory, we could increase the sizes of `IBF` structures used from `2^10..2^17` to `2^10..2^20`.
-This would allow us to recover the set difference if it's up to `2^20/1.3` instead of `2^17/1.3` at cost of increasing memory overhead from `160 MiB` to `640 Mib`.
+In theory, we could increase the sizes of `IBF` structures used from `2^10 .. 2^17` to `2^10 .. 2^20`.
+This would allow us to recover the set difference if it's up to `2^20 / 1.3` instead of `2^17 / 1.3` at cost of increasing memory overhead from `160 MiB` to `640 Mib`.
 
 ### Simplify algorithm to only exchange list of hashes of known edges of each peer
 Each edge has a size of about 400 bytes.
