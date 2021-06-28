@@ -220,3 +220,5 @@ In the current design, both peers communicate to each other exchanging messages.
 It may be easier to maintain the code in the future, if we switch to a server/client model.
 Where `A` does all requests, `B` sends only responses.
 This would increase the number of messages exchanged, but could make it simpler to maintain/debug the code.
+
+### Add maximum IBF size as argument
