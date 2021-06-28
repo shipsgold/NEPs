@@ -150,7 +150,7 @@ Peer `B` chooses unique `seed`, and generates `IbfPeerSet` based on seed and all
 [Routing Table](NetworkSpec.md#Routing Table).
 
 ## Step 3 - 10
-On odd steps peer `B` sends message to peer `A`, with Ibf of size `2^(step+7)`.
+On odd steps peer `B` sends message to peer `A`, with Ibf of size `2^(step + 7)`.
 On even steps, peer `A` does it.
 - Case 1 - if we were unable to find all edges we continue to the next step.
 - Case 2 - otherwise, we know what the set difference is.
@@ -189,7 +189,7 @@ Assuming we keep `40` such data structures, that requires up to `960` updates.
 # Future improvements
 
 ### Reduce overhead on adding new edge
-We may have to do `40*8*3=960` updates of `IbfElem` on adding each new edge.
+We may have to do `40 * 8 * 3 = 960` updates of `IbfElem` on adding each new edge.
 This overhead can be reduced by moving updating `IbfElem` to another thread.
 
 # Alternative approaches
