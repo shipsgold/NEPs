@@ -221,4 +221,7 @@ It may be easier to maintain the code in the future, if we switch to a server/cl
 Where `A` does all requests, `B` sends only responses.
 This would increase the number of messages exchanged, but could make it simpler to maintain/debug the code.
 
-### Add maximum IBF size as argument
+### Reduce memory usage
+Currently we use `4 MiB` per connection, which can be as high as `160 MiB` total. 
+If we decide we want to support more connections and reduce memory usage in the future, we can, for example, remove `IbfPeerSet` after we use it to free the memory.
+Or add an extra parameter, which specifices maximum `Ibf` size used per connection.
